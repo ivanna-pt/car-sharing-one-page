@@ -419,6 +419,7 @@ body {
 
 .services__wrapper {
   display: flex;
+  align-items: center;
 }
 .services__buttons-wrapper {
   margin: 0 2rem 0 0;
@@ -445,8 +446,6 @@ body {
   transform: scale(1.1);
 }
 .services-content__wrapper {
-  display: flex;
-  align-items: center;
   width: 100%;
 }
 .services-progress__wrapper {
@@ -456,6 +455,284 @@ body {
 }
 .services-progress__wrapper .progress__item {
   margin: 0 2rem;
+}
+.services-progress__wrapper .progress__bar {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #EF233C;
+  border-radius: 50%;
+}
+.services-progress__wrapper .progress__text {
+  font-size: 1.75rem;
+}
+.services-progress__wrapper .progress__title {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.impressed {
+  background-image: url("../img/bg-impressed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.impressed:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.impressed .container {
+  position: relative;
+  z-index: 100;
+}
+.impressed .text {
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-menu__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-menu__item {
+  margin: 2rem 1.5rem;
+}
+.portfolio-link {
+  font-size: 1.25rem;
+  position: relative;
+}
+.portfolio-link:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  left: 50%;
+  bottom: -0.6rem;
+  width: 38px;
+  height: 3px;
+  background-color: #EF233C;
+  transform: translate(-50%, 0) scale(0);
+  transition: all 0.4s ease 0s;
+}
+.portfolio-link:hover:after {
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+}
+.portfolio-link.active {
+  color: #EF233C;
+}
+.portfolio-link.active:after {
+  visibility: visible;
+  transform: translate(-50%, 0) scale(1);
+}
+.portfolio__gallery {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr 3fr;
+  grid-template-rows: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+.portfolio__gallery .gallery__item {
+  min-height: 250px;
+}
+.portfolio__gallery .gallery__item-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__gallery .gallery__item-wrapper:hover {
+  opacity: 1;
+}
+.portfolio__gallery .gallery__item-wrapper .text-sm {
+  font-size: 0.9rem;
+  line-height: 1rem;
+  color: #EDF2F4;
+}
+.portfolio__gallery .gallery__item-wrapper .title {
+  margin-bottom: 1.5rem;
+  color: #EF233C;
+  font-size: 1.5rem;
+  position: relative;
+}
+.portfolio__gallery .gallery__item-wrapper .title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.75rem;
+  width: 2rem;
+  height: 2px;
+  background-color: #EF233C;
+}
+.portfolio__gallery .gallery__item-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.portfolio__gallery .gallery__item .item__content {
+  position: relative;
+  z-index: 10;
+}
+.portfolio__gallery .gallery__item .gallery__btn-wrapper {
+  position: relative;
+  z-index: 10;
+  justify-self: baseline;
+  align-self: flex-start;
+  display: flex;
+}
+.portfolio__gallery .gallery__item .gallery__btn-wrapper div {
+  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  color: #FFFFFF;
+  background-color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__gallery .gallery__item .gallery__btn-wrapper div:hover {
+  background-color: #EF233C;
+}
+.portfolio__gallery .gallery__item:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.portfolio__gallery .gallery__item:nth-child(2) {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.portfolio__gallery .gallery__item:nth-child(3) {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.portfolio__gallery .gallery__item:nth-child(4) {
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.portfolio__gallery .gallery__item:nth-child(5) {
+  grid-row-start: 6;
+  grid-row-end: 10;
+}
+.portfolio__gallery .gallery__item:nth-child(6) {
+  grid-row-start: 4;
+  grid-row-end: 8;
+}
+.portfolio__gallery .gallery__item:nth-child(7) {
+  grid-row-start: 5;
+  grid-row-end: 10;
+}
+.portfolio__gallery .gallery__item:nth-child(8) {
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+.portfolio__gallery .gallery__item:nth-child(9) {
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+.portfolio__gallery .gallery__item:nth-child(10) {
+  grid-row-start: 8;
+  grid-row-end: 13;
+}
+.portfolio__gallery .gallery__item:nth-child(11) {
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+.portfolio__gallery .gallery__item:nth-child(12) {
+  grid-row-start: 9;
+  grid-row-end: 13;
+}
+.portfolio__gallery .item-1 {
+  background-image: url("../img/portfolio/brand-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-2 {
+  background-image: url("../img/portfolio/vintage-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-3 {
+  background-image: url("../img/portfolio/brand-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-4 {
+  background-image: url("../img/portfolio/electric-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-5 {
+  background-image: url("../img/portfolio/race-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-6 {
+  background-image: url("../img/portfolio/electric-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-7 {
+  background-image: url("../img/portfolio/race-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-8 {
+  background-image: url("../img/portfolio/electric-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-9 {
+  background-image: url("../img/portfolio/brand-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-10 {
+  background-image: url("../img/portfolio/vintage-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-11 {
+  background-image: url("../img/portfolio/race-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__gallery .item-12 {
+  background-image: url("../img/portfolio/vintage-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */
