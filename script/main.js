@@ -1,3 +1,10 @@
+//Navbar toggle
+const menuLinks = document.querySelectorAll('.menu__link');
+menuLinks.forEach(element => element.addEventListener('click', toggleMenu));
+function toggleMenu(e){
+    menuLinks.forEach(element => element.classList.remove('active-link'));
+    e.target.classList.add('active-link');
+}
 
 //Intro Read More Button
 const readMoreButton = document.querySelector('#read-more-btn');
@@ -49,4 +56,24 @@ function setDataId(arr){
 setDataId(aboutContent);
 setDataId(aboutButtons);
 
+//Services button handler
+const servicesButtons = document.querySelectorAll('.services-btn');
+const servicesContent = document.querySelectorAll('.services-content__item');
+
+setDataId(servicesButtons);
+setDataId(servicesContent);
+
+servicesButtons.forEach(item => item.addEventListener('click', toggleServices));
+
+function toggleServices(e) {
+    servicesButtons.forEach(element => element.classList.remove('active'));
+    e.target.classList.add('active');
+    servicesContent.forEach(element => {
+        element.classList.add('hidden');
+        if(element.dataset.id === e.target.dataset.id){
+            element.classList.add('visible');
+            element.classList.toggle('hidden');
+        }
+    })
+}
 
