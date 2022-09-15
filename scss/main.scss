@@ -437,6 +437,10 @@ body{
 }
 
 .portfolio{
+  background-color: $background-color;
+  &-menu{
+    margin-bottom: 2rem;
+  }
 
   &-menu__wrapper{
     display: flex;

@@ -499,6 +499,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.portfolio {
+  background-color: #EDF2F4;
+}
+.portfolio-menu {
+  margin-bottom: 2rem;
+}
 .portfolio-menu__wrapper {
   display: flex;
   justify-content: center;
