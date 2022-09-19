@@ -1,4 +1,5 @@
 @import "config";
+@import "portfolio";
 
 body{
   font-family: "Open Sans", sans-serif;
@@ -82,6 +83,12 @@ body{
 .text-sm{
   font-size: 1rem;
   line-height: 1.75rem;
+  letter-spacing: 0.05rem;
+}
+
+.text-lg{
+  font-size: 1.5rem;
+  line-height: 2rem;
   letter-spacing: 0.05rem;
 }
 
@@ -341,9 +348,6 @@ body{
     align-items: center;
     justify-content: space-between;
 
-    p{
-      font-size: 1.5rem;
-    }
     .primary-btn{
       @include primary-button(#fff);
     }
@@ -436,291 +440,7 @@ body{
   }
 }
 
-.portfolio{
-  background-color: $background-color;
-  &-menu{
-    margin-bottom: 2rem;
-  }
 
-  &-menu__wrapper{
-    display: flex;
-    justify-content: center;
-  }
-
-  &-menu__item{
-    margin: 2rem 1.5rem;
-  }
-
-  &-link{
-    font-size: 1.25rem;
-    position: relative;
-
-    &:after{
-      content: '';
-      position: absolute;
-      visibility: hidden;
-      left: 50%;
-      bottom: -0.6rem;
-      width: 38px;
-      height: 3px;
-      background-color: $primary-color;
-      transform: translate(-50%,0) scale(0);
-      transition: all .4s ease 0s;
-    }
-
-    &:hover:after{
-      visibility: visible;
-      transform: translate(-50%,0) scale(1);
-    }
-
-    &.active{
-      color: $primary-color;
-    }
-
-    &.active:after{
-      visibility: visible;
-      transform: translate(-50%,0) scale(1);
-    }
-  }
-
-  &__gallery{
-    display: grid;
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    grid-template-rows: repeat(12, 1fr);
-    gap: 1.5rem;
-
-    .gallery__item{
-      //justify-items: stretch;
-      min-height: 250px;
-      &-wrapper{
-        width: 100%;
-        height: 100%;
-        padding: 1.5rem 1.5rem 1rem 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        position: relative;
-        opacity: 0;
-        @include transition;
-
-        &:hover{
-          opacity: 1;
-        }
-
-        .text-sm{
-          font-size: 0.9rem;
-          line-height: 1rem;
-          color: $background-color;
-        }
-
-        .title{
-          margin-bottom: 1.5rem;
-          color: $primary-color;
-          font-size: 1.5rem;
-          position: relative;
-
-          &:after{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -0.75rem;
-            width: 2rem;
-            height: 2px;
-            background-color: $primary-color;
-          }
-        }
-
-        &:after{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.6);
-        }
-      }
-
-      .item__content{
-        position: relative;
-        z-index: 10;
-      }
-
-      .gallery__btn-wrapper{
-        position: relative;
-        z-index: 10;
-        justify-self: baseline;
-        align-self: flex-start;
-        display: flex;
-
-        & div{
-          margin-right: 0.5rem;
-          width: 2rem;
-          height: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 0.9rem;
-          border-radius: 50%;
-          color: #FFFFFF;
-          background-color: #000000;
-          cursor: pointer;
-          @include transition;
-
-          &:hover{
-            background-color: $primary-color;
-          }
-        }
-      }
-    }
-
-    .gallery__item:nth-child(1){
-      grid-row-start: 1;
-      grid-row-end: 6;
-    }
-
-    .gallery__item:nth-child(2){
-      grid-row-start: 1;
-      grid-row-end: 4;
-    }
-
-    .gallery__item:nth-child(3){
-      grid-row-start: 1;
-      grid-row-end: 5;
-    }
-
-    .gallery__item:nth-child(4){
-      grid-row-start: 1;
-      grid-row-end: 6;
-    }
-
-    .gallery__item:nth-child(5){
-      grid-row-start: 6;
-      grid-row-end: 10;
-    }
-
-    .gallery__item:nth-child(6){
-      grid-row-start: 4;
-      grid-row-end: 8;
-    }
-
-    .gallery__item:nth-child(7){
-      grid-row-start: 5;
-      grid-row-end: 10;
-    }
-
-    .gallery__item:nth-child(8){
-      grid-row-start: 6;
-      grid-row-end: 9;
-    }
-
-    .gallery__item:nth-child(9){
-      grid-row-start: 10;
-      grid-row-end: 13;
-    }
-
-    .gallery__item:nth-child(10){
-      grid-row-start: 8;
-      grid-row-end: 13;
-    }
-
-    .gallery__item:nth-child(11){
-      grid-row-start: 10;
-      grid-row-end: 13;
-    }
-
-    .gallery__item:nth-child(12){
-      grid-row-start: 9;
-      grid-row-end: 13;
-    }
-
-    .item-1{
-      background-image: url("../img/portfolio/brand-1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-2{
-      background-image: url("../img/portfolio/vintage-1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-3{
-      background-image: url("../img/portfolio/brand-2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-4{
-      background-image: url("../img/portfolio/electric-1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-5{
-      background-image: url("../img/portfolio/race-1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-6{
-      background-image: url("../img/portfolio/electric-2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-7{
-      background-image: url("../img/portfolio/race-2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-8{
-      background-image: url("../img/portfolio/electric-3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-9{
-      background-image: url("../img/portfolio/brand-3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-10{
-      background-image: url("../img/portfolio/vintage-2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-11{
-      background-image: url("../img/portfolio/race-3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .item-12{
-      background-image: url("../img/portfolio/vintage-3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-  }
-}
 
 
 

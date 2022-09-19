@@ -143,7 +143,7 @@
         </div>
         <div class="projects__item item-4">
             <div class="item__content container">
-                <p class="white-text">At vero eos et <span class="accent">accusamus</span> et iusto odio dignissimos ducimus qui blanditiis</p>
+                <p class="white-text text-lg">At vero eos et <span class="accent">accusamus</span> et iusto odio dignissimos ducimus qui blanditiis</p>
                 <div class="project__button">
                     <a href="#" class="primary-btn">Submit Now</a>
                 </div>
@@ -248,16 +248,16 @@
 
         <div class="portfolio-menu">
             <ul class="portfolio-menu__wrapper">
-                <li class="portfolio-menu__item"><a href="" class="portfolio-link active">All</a></li>
-                <li class="portfolio-menu__item"><a href="" class="portfolio-link">Electric cars</a></li>
-                <li class="portfolio-menu__item"><a href="" class="portfolio-link">Brands</a></li>
-                <li class="portfolio-menu__item"><a href="" class="portfolio-link">Vintage cars</a></li>
-                <li class="portfolio-menu__item"><a href="" class="portfolio-link">Race cars</a></li>
+                <li class="portfolio-link active" data-id="all">All</li>
+                <li class="portfolio-link" data-id="electric">Electric cars</li>
+                <li class="portfolio-link" data-id="brands">Brands</li>
+                <li class="portfolio-link" data-id="vintage">Vintage cars</li>
+                <li class="portfolio-link" data-id="race">Race cars</li>
             </ul>
         </div>
 
-        <div class="portfolio__gallery">
-            <div class="gallery__item item-1">
+        <div class="portfolio__gallery" id="gallery">
+            <div class="gallery__item item-1 brands race" data-category="brands race">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-2">
+            <div class="gallery__item item-2 vintage" data-category="vintage">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -282,6 +282,18 @@
                 </div>
             </div>
             <div class="gallery__item item-3">
+                <div class="gallery__item-wrapper brands" data-category="brands">
+                    <div class="item__content">
+                        <div class="title">Title</div>
+                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  possimus quia quo reprehenderit unde voluptatem?</p>
+                    </div>
+                    <div class="gallery__btn-wrapper">
+                        <div class="share-btn fa-solid fa-link"></div>
+                        <div class="like-btn fa-regular fa-heart"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery__item item-4 electric" data-category="electric">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -293,7 +305,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-4">
+            <div class="gallery__item item-5 race" data-category="race">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -305,7 +317,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-5">
+            <div class="gallery__item item-6 electric race" data-category="electric race">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -317,7 +329,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-6">
+            <div class="gallery__item item-7 brands race" data-category="brands race">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -329,7 +341,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-7">
+            <div class="gallery__item item-8 electric" data-category="electric">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -341,7 +353,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-8">
+            <div class="gallery__item item-9 brands vintage" data-category="brands vintage">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -353,7 +365,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-9">
+            <div class="gallery__item item-10 vintage" data-category="vintage">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -365,7 +377,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-10">
+            <div class="gallery__item item-11 race" data-category="race">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -377,19 +389,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery__item item-11">
-                <div class="gallery__item-wrapper">
-                    <div class="item__content">
-                        <div class="title">Title</div>
-                        <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit.  possimus quia quo reprehenderit unde voluptatem?</p>
-                    </div>
-                    <div class="gallery__btn-wrapper">
-                        <div class="share-btn fa-solid fa-link"></div>
-                        <div class="like-btn fa-regular fa-heart"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery__item item-12">
+            <div class="gallery__item item-12 brands vintage" data-category="brands vintage">
                 <div class="gallery__item-wrapper">
                     <div class="item__content">
                         <div class="title">Title</div>
@@ -405,8 +405,8 @@
 
         <div class="portfolio-footer">
             <div class="portfolio-footer__content">
-                <p class="white-text">At vero eos et <span class="accent">accusamus</span> et iusto odio dignissimos ducimus qui blanditiis</p>
-                <div class="project__button">
+                <p class="white-text text-lg">At vero eos et <span class="accent">accusamus</span> et iusto odio dignissimos ducimus qui blanditiis</p>
+                <div class="portfolio-footer__button">
                     <a href="#" class="primary-btn">Submit Now</a>
                 </div>
             </div>
