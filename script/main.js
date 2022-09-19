@@ -77,3 +77,28 @@ function toggleServices(e) {
     })
 }
 
+//Portfolio Filter Handler
+let galleryItems = document.querySelectorAll(".gallery__item");
+let galleryButtons = document.querySelectorAll(".portfolio-link");
+let gallery = document.querySelector("#gallery");
+console.log(galleryButtons);
+galleryButtons.forEach(item => item.addEventListener('click', filterGallery));
+
+function filterGallery(e){
+    console.log(e.target.dataset.id);
+    galleryButtons.forEach(element => element.classList.remove('active'));
+    e.target.classList.add('active');
+    gallery.innerHTML = "";
+
+    if(e.target.dataset.id === "all"){
+        galleryItems.forEach(element => gallery.append(element));
+    }
+
+    galleryItems.forEach(element => {
+        if (element.classList.contains(e.target.dataset.id)){
+            console.log(element);
+            gallery.append(element);
+        }
+    })
+}
+
