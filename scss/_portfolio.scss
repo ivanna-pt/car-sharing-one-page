@@ -45,14 +45,13 @@
 
   &__gallery{
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
     @include transition;
 
     .gallery__item{
-      //justify-items: stretch;
-      min-height: 250px;
+      //min-height: 250px;
       @include transition;
       &-wrapper{
         width: 100%;
@@ -285,7 +284,7 @@
 
   &-footer{
     margin-top: 2rem;
-    height: 250px;
+   max-height: 250px;
     padding: 3rem;
     background-image: url("../img/portfolio/bg-portfolio.jpg");
     background-repeat: no-repeat;

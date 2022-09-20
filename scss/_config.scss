@@ -6,6 +6,10 @@ $accent-color: #8D99AE;
 
 $heading-font-family: 'Source Sans Pro', sans-serif;
 
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+
 html{
   scroll-behavior: smooth;
 }
@@ -42,6 +46,16 @@ img, svg{
   color: $color;
   border: 1px solid $color;
   border-radius: 1.5rem;
+}
+
+@mixin burger-menu($width, $top){
+  position: absolute;
+  left: 0;
+  top: $top;
+  width: $width;
+  height: 3px;
+  background-color: $primary-color;
+  @include transition;
 }
 
 @mixin round-button{

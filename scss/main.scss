@@ -1,4 +1,5 @@
 @import "config";
+@import "header";
 @import "portfolio";
 
 body{
@@ -7,14 +8,13 @@ body{
   font-size: 18px;
 }
 
-
 .container{
-  width: 1170px;
+  max-width: 1170px;
   margin:0 auto;
 }
 
 .section{
-  padding: 100px 0;
+  padding: 5.5rem 0;
 }
 
 .title{
@@ -66,6 +66,7 @@ body{
   overflow: visible;
   max-height: 100%;
   opacity: 1;
+  transition: opacity 0.3s ease-in;
 }
 
 .hidden{
@@ -105,111 +106,11 @@ body{
   }
 }
 
-//Header
-.header{
-  background-image: url("../img/background.jpg");
-  background-repeat:no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  position: relative;
-
-  &:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: 1;
-  }
-
-  .container{
-    height: 100%;
-  }
-
-  &__wrapper{
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  &__nav-bar{
-    width: 100%;
-    margin-top: 1.5rem;
-    padding: 0.75rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .menu__list{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .menu__link{
-    padding:0.5rem  0.75rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    border-radius: 1.5rem;
-    @include transition;
-
-    &:hover{
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
-
-  &__body{
-  text-align: center;
-    width: 70%;
-  }
-
-  &__title{
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-  }
-
-  &__text{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .btn__wrapper{
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background-color: $primary-color;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    @include transition;
-
-    &:hover{
-      color: $primary-color;
-      background-color: #FFFFFF;
-      box-shadow: 0px -3px 9px rgba(255, 255, 255, 0.7);
-      transform: scale(110%) translateY(10px);
-    }
-  }
-
-  .btn-down{
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
-}
-
 .intro{
   &__container{
     display: flex;
     justify-content: center;
+    transition: all 0.5s ease;
   }
 
   &__item{
@@ -225,6 +126,7 @@ body{
 
   &__content{
     margin-right: 2.5rem;
+    transition: all 0.5s ease;
   }
 
   &__more{
@@ -236,6 +138,7 @@ body{
 
   &__button{
     margin-top: 2rem;
+    transition: all 0.5s ease 0s;
   }
 }
 
@@ -255,6 +158,11 @@ body{
         transform: scale(1.1);
       }
     }
+  }
+
+  &-content__wrapper{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .text__wrapper{
@@ -325,6 +233,7 @@ body{
     background-image: url("../img/projects/item-3.jpg");
     @include projects-overlay(rgba(0, 0, 0, 0.5));
     @include transition;
+
     &:hover{
       transform: scale(1.05);
       z-index: 10;
@@ -345,8 +254,20 @@ body{
     position: relative;
     z-index: 100;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    & p{
+      margin-bottom: 1rem;
+    }
+
+    .project__button{
+      margin-right: 1rem;
+      flex: 0 0 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
 
     .primary-btn{
       @include primary-button(#fff);
@@ -415,6 +336,8 @@ body{
 }
 
 .impressed{
+  padding-right: 1rem;
+  padding-left: 1rem;
   background-image: url("../img/bg-impressed.jpg");
   background-repeat:no-repeat;
   background-size: cover;
@@ -440,7 +363,7 @@ body{
   }
 }
 
-
+@import "responsive";
 
 
 

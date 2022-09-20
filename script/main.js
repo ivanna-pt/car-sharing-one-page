@@ -1,9 +1,39 @@
 //Navbar toggle
 const menuLinks = document.querySelectorAll('.menu__link');
 menuLinks.forEach(element => element.addEventListener('click', toggleMenu));
+
+
+
 function toggleMenu(e){
     menuLinks.forEach(element => element.classList.remove('active-link'));
     e.target.classList.add('active-link');
+    showBurgerMenu();
+}
+
+const menuBtn = document.querySelector('.menu-btn');
+const hamburger = document.querySelector('.menu-btn__burger');
+const nav = document.querySelector('.header__menu');
+const menuNav = document.querySelector('.menu__list');
+
+menuBtn.addEventListener('click', showBurgerMenu);
+
+let showMenu = false;
+function showBurgerMenu(){
+    if(!showMenu){
+        hamburger.classList.add('open');
+        nav.classList.add('open');
+        menuNav.classList.add('open');
+        menuLinks.forEach(item => item.classList.add('open'));
+
+        showMenu = true;
+    } else{
+        hamburger.classList.remove('open');
+        nav.classList.remove('open');
+        menuNav.classList.remove('open');
+        menuLinks.forEach(item => item.classList.remove('open'));
+
+        showMenu = false;
+    }
 }
 
 //Intro Read More Button
