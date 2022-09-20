@@ -1,3 +1,20 @@
+//Navbar shrink
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+    const currentScrollPos = window.scrollY;
+    const navbarCollapsible = document.querySelector("#navBar")
+    if (prevScrollpos > currentScrollPos) {
+        navbarCollapsible.style.top = "0";
+        navbarCollapsible.classList.add('shrink');
+    } else {
+        navbarCollapsible.style.top = "-100px";
+    }
+    if(currentScrollPos < 1){
+        navbarCollapsible.classList.remove('shrink');
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 //Navbar toggle
 const menuLinks = document.querySelectorAll('.menu__link');
 menuLinks.forEach(element => element.addEventListener('click', toggleMenu));
