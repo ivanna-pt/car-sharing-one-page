@@ -1,0 +1,115 @@
+.contact{
+  background-color: $background-color;
+
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  &-item{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    &__image{
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include contact-overlay;
+
+      &.email{
+        background-image: url("../img/email.jpg");
+      }
+
+      &.office{
+        background-image: url("../img/office.jpg");
+      }
+
+      &.phone{
+        background-image: url("../img/phone.jpg");
+      }
+
+      & i{
+        font-size: 3rem;
+        color: #FFFFFF;
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    &__info{
+      flex: 1;
+      padding: 1.75rem 1.5rem;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &-title{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  &-text{
+    text-transform: uppercase;
+    color: $accent-color;
+    word-break: break-all;
+  }
+}
+
+.submit{
+  &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    .input{
+      font-size: 1rem;
+      padding: 0.5rem 0.3rem 0.5rem 0.9rem;
+      border: 1px solid $accent-color;
+      outline: none;
+      @include transition;
+
+      &:focus{
+        box-shadow: 0 0 5px 0 rgb(239, 35, 60, 0.6);
+      }
+    }
+
+    .text-area{
+      grid-column: 1/4;
+      height: 200px;
+      font-size: 1rem;
+      padding: 0.5rem 0.3rem 0.5rem 0.9rem;
+      border: 1px solid $accent-color;
+      outline: none;
+
+      &:focus{
+        box-shadow: 0 0 5px 0 rgb(239, 35, 60, 0.6);
+      }
+    }
+
+    .submit-btn{
+      padding: 0.75rem 0;
+      grid-column: 1/4;
+      background-color: $primary-color;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 1.25rem;
+      border-radius: 3px;
+      cursor: pointer;
+      @include transition;
+
+      &:hover{
+        background-color: darken($primary-color, 7%);
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

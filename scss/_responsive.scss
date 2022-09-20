@@ -77,6 +77,10 @@
       padding: 2rem;
     }
   }
+
+  .contact-text{
+    font-size: 0.8rem;
+  }
 }
 
 @media  screen and (max-width: $breakpoint-md) {
@@ -200,6 +204,39 @@
   .portfolio-link{
     font-size: 1.1rem;
     margin: 0.5rem 0.75rem;
+  }
+
+  .contact{
+    &__wrapper{
+      padding-left: 1rem;
+      padding-right: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    &-item{
+      flex-direction: row;
+      height: 120px;
+
+      &__info{
+        padding: 1.3rem 1rem;
+      }
+
+      & i{
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .submit{
+    &__wrapper{
+      padding-right: 1rem;
+      padding-left: 1rem;
+      grid-template-columns: 1fr;
+
+    .text-area, .submit-btn{
+      grid-column: 1;
+    }
+    }
   }
 }
 
