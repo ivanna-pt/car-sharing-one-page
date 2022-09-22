@@ -95,21 +95,10 @@
     }
 
     .submit-btn{
-      padding: 0.75rem 0;
+      @include secondary-btn($primary-color);
       grid-column: 1/4;
-      background-color: $primary-color;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 1.25rem;
-      border-radius: 3px;
       cursor: pointer;
       @include transition;
-
-      &:hover{
-        background-color: darken($primary-color, 7%);
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-      }
     }
   }
 }

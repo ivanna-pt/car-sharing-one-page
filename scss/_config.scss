@@ -52,6 +52,22 @@ img, svg{
   border-radius: 1.5rem;
 }
 
+@mixin secondary-btn($color){
+  padding: 0.75rem 1rem;
+  background-color: $color;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: darken($color, 7%);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
 @mixin burger-menu($width, $top){
   position: absolute;
   left: 0;
