@@ -17,10 +17,6 @@
     opacity: 0.5;
     z-index: 0;
   }
-  //
-  //.container{
-  //  height: 100%;
-  //}
 
   &__wrapper{
     height: 100%;
@@ -43,7 +39,7 @@
     @include transition;
 
     &.shrink{
-      background-color: $text-color;
+      background-color: rgba(43, 45, 66, 0.9);
     }
 
     .nav-bar__container{
